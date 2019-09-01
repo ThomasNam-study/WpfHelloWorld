@@ -4,9 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfHelloWorld"
+        xmlns:ct="clr-namespace:WpfHelloWorld.Control"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ct:SimpleEllipse HorizontalAlignment="Center" VerticalAlignment="Center" Width="26" Height="26"></ct:SimpleEllipse>
+        <ct:BetterEllipse Grid.Row="1" Fill="AliceBlue">
+            <ct:BetterEllipse.Stroke>
+                <Pen Brush="Aquamarine"></Pen>
+            </ct:BetterEllipse.Stroke>
+        </ct:BetterEllipse>
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfHelloWorld.Control;
 
 namespace WpfHelloWorld
 {
@@ -20,6 +21,25 @@ namespace WpfHelloWorld
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static readonly DependencyProperty SpaceProperty;
+
+        public int Space
+        {
+            set => SetValue(SpaceProperty, value);
+
+            get => (int)GetValue(SpaceProperty);
+        }
+
+        static MainWindow()
+        {
+            FrameworkPropertyMetadata meta = new FrameworkPropertyMetadata();
+
+            meta.Inherits = true;
+
+            SpaceProperty = SpaceButton.SpaceProperty.AddOwner(typeof(MainWindow));
+            SpaceProperty.OverrideMetadata (typeof(MainWindow), meta);
+        }
+
         public MainWindow()
         {
             InitializeComponent();
