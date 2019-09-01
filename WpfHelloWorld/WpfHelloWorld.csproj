@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Control\BetterEllipse.cs" />
+    <Compile Include="Control\MedievalButton.cs" />
     <Compile Include="Control\SimpleEllipse.cs" />
     <Compile Include="Control\SpaceButton.cs" />
     <Compile Include="MainWindow.xaml.cs">
